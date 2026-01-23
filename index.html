@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF14 天書奇談計算器 - 重新貼洗牌攻略 | FFXIV 繁中工具箱</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="FFXIV 天書奇談（Wondrous Tails）計算器，分析胡思亂想「重新貼」的最佳使用時機。根據印章位置計算連線機率，提供洗牌策略建議。">
+    <meta name="keywords" content="FF14, FFXIV, 天書奇談, 計算器, 計算機, 攻略, 洗牌, 重新貼, 胡思亂想, Wondrous Tails, 庫洛, 連線機率">
+    <meta name="author" content="FFXIV 繁中工具箱">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FF14 天書奇談計算器 - 重新貼洗牌攻略">
+    <meta property="og:description" content="分析胡思亂想「重新貼」的最佳使用時機，計算連線機率，提供洗牌策略建議。">
+    <meta property="og:locale" content="zh_TW">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FF14 天書奇談計算器 - 重新貼洗牌攻略">
+    <meta name="twitter:description" content="分析胡思亂想「重新貼」的最佳使用時機，計算連線機率，提供洗牌策略建議。">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://cycleapple.github.io/xiv-tc-wondrous-tails/">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../xiv-tc-toolbox/index.html" class="nav-btn back-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                返回工具箱
+            </a>
+            <div class="nav-right">
+                <a href="https://discord.gg/FfXIV" class="nav-btn discord-btn" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                    </svg>
+                    Discord
+                </a>
+                <a href="https://ko-fi.com/example" class="nav-btn support-btn" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                    支持作者
+                </a>
+            </div>
+        </nav>
+        <div class="header-content">
+            <h1>天書奇談計算器</h1>
+            <p class="subtitle">分析「胡思亂想－重新貼」的最佳使用時機</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Decision Card -->
+        <section class="decision-section">
+            <div class="decision-card" id="decisionCard">
+                <div class="decision-header">
+                    <span class="decision-icon" id="decisionIcon">📋</span>
+                    <h2 id="decisionTitle">請放置印章</h2>
+                </div>
+                <p class="decision-desc" id="decisionDesc">在下方格子中標記你目前天書上的印章位置</p>
+                <div class="decision-details" id="decisionDetails"></div>
+            </div>
+        </section>
+
+        <!-- Strategy Selector -->
+        <section class="strategy-section">
+            <label class="strategy-label">目標策略</label>
+            <div class="strategy-selector" id="strategySelector">
+                <button class="strategy-btn active" data-strategy="potential">潛在連線法 ✦</button>
+                <button class="strategy-btn" data-strategy="one">1線最高</button>
+                <button class="strategy-btn" data-strategy="two">2線最高</button>
+                <button class="strategy-btn" data-strategy="three">3線最高</button>
+            </div>
+            <div class="strategy-desc" id="strategyDesc">
+                <p class="strategy-text">在 7 印章時根據「潛在連線數」決定，平衡各種結果的最佳策略。</p>
+            </div>
+        </section>
+
+        <!-- Board Section -->
+        <section class="board-section">
+            <div class="board-header">
+                <div class="seal-counter">
+                    <span class="counter-label">印章</span>
+                    <span class="counter-value"><span id="sealCount">0</span>/9</span>
+                </div>
+                <div class="shuffle-status" id="shuffleStatus">
+                    <span class="status-dot unavailable"></span>
+                    <span>重新貼：需 3+ 印章</span>
+                </div>
+            </div>
+            <div class="board-container">
+                <div class="board-grid" id="boardGrid"></div>
+            </div>
+            <div class="board-actions">
+                <button class="reset-btn" id="resetBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                        <path d="M3 3v5h5"/>
+                    </svg>
+                    重置
+                </button>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">目前連線</div>
+                    <div class="stat-value" id="currentLines">0</div>
+                </div>
+                <div class="stat-card highlight">
+                    <div class="stat-label">潛在連線</div>
+                    <div class="stat-value" id="potentialLines">0</div>
+                    <div class="stat-hint">最佳情況下可達成</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Probability Section -->
+        <section class="probability-section">
+            <h3 class="section-title">完成機率</h3>
+            <div class="probability-grid">
+                <div class="prob-card">
+                    <div class="prob-header">
+                        <span class="prob-title">你的天書</span>
+                    </div>
+                    <div class="prob-table">
+                        <div class="prob-row">
+                            <span class="prob-label">0 條線</span>
+                            <span class="prob-value" id="prob0">0%</span>
+                        </div>
+                        <div class="prob-row">
+                            <span class="prob-label">1 條線</span>
+                            <span class="prob-value" id="prob1">0%</span>
+                        </div>
+                        <div class="prob-row">
+                            <span class="prob-label">2 條線</span>
+                            <span class="prob-value" id="prob2">0%</span>
+                        </div>
+                        <div class="prob-row gold">
+                            <span class="prob-label">3 條線</span>
+                            <span class="prob-value" id="prob3">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prob-card baseline">
+                    <div class="prob-header">
+                        <span class="prob-title">平均值</span>
+                        <span class="prob-subtitle">（重新貼後）</span>
+                    </div>
+                    <div class="prob-table">
+                        <div class="prob-row">
+                            <span class="prob-label">0 條線</span>
+                            <span class="prob-value" id="baseline0">41.5%</span>
+                        </div>
+                        <div class="prob-row">
+                            <span class="prob-label">1 條線</span>
+                            <span class="prob-value" id="baseline1">47.9%</span>
+                        </div>
+                        <div class="prob-row">
+                            <span class="prob-label">2 條線</span>
+                            <span class="prob-value" id="baseline2">10.4%</span>
+                        </div>
+                        <div class="prob-row gold">
+                            <span class="prob-label">3 條線</span>
+                            <span class="prob-value" id="baseline3">0.21%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy Guide -->
+        <section class="info-section">
+            <details class="info-details" open>
+                <summary>最佳策略（7 印章決策法）</summary>
+                <div class="info-content">
+                    <p>根據社群研究，最佳決策點在 <strong>7 個印章</strong> 時：</p>
+                    <div class="strategy-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>狀態</th>
+                                    <th>潛在 1 線</th>
+                                    <th>潛在 2 線</th>
+                                    <th>潛在 3 線</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0 條已連線</td>
+                                    <td class="shuffle">重新貼</td>
+                                    <td class="maybe">看情況</td>
+                                    <td class="keep">不要貼</td>
+                                </tr>
+                                <tr>
+                                    <td>1+ 條已連線</td>
+                                    <td class="keep">—</td>
+                                    <td class="keep">不要貼</td>
+                                    <td class="keep">不要貼</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="strategy-rules">
+                        <li><strong>潛在連線</strong> = 剩餘印章最佳放置能達成的最大連線數</li>
+                        <li>潛在 1 線（棋盤格）→ 必定重新貼（89% 改善）</li>
+                        <li>潛在 3 線 → 絕對不要重新貼（93%+ 變差）</li>
+                        <li>已有連線 → 不要重新貼（79% 變差）</li>
+                        <li>潛在 2 線 → 可考慮重新貼（21% 變好、11% 變差）</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="info-details">
+                <summary>什麼是「胡思亂想」？</summary>
+                <div class="info-content">
+                    <p><strong>胡思亂想</strong>是天書奇談中的功能：</p>
+                    <ul>
+                        <li><strong>再想想</strong>：交換一個已完成/未完成的任務（不影響連線）</li>
+                        <li><strong>重新貼</strong>：將印章隨機重新分配位置（3～7 印章時可用）</li>
+                    </ul>
+                    <p class="info-tip">「重新貼」在正確時機使用可以大幅提升獲得更好獎勵的機率。</p>
+                </div>
+            </details>
+
+            <details class="info-details">
+                <summary>機率說明</summary>
+                <div class="info-content">
+                    <p>完全隨機的天書（9 個印章）機率分佈：</p>
+                    <ul>
+                        <li>0 條線：41.54%</li>
+                        <li>1 條線：47.90%</li>
+                        <li>2 條線：10.35%</li>
+                        <li>3 條線：0.21%</li>
+                    </ul>
+                    <p class="info-tip">這也是使用「重新貼」後的期望機率。你的天書如果比這個好，就不要重新貼。</p>
+                </div>
+            </details>
+
+            <details class="info-details">
+                <summary>參考資料</summary>
+                <div class="info-content">
+                    <p>本工具的策略與機率計算參考以下資源：</p>
+                    <ul class="credits-list">
+                        <li><a href="https://www.reddit.com/r/ffxiv/comments/550lo8/wondrous_tails_analysis_when_should_you_shuffle/" target="_blank" rel="noopener noreferrer">Wondrous Tails Analysis: When Should You Shuffle?</a> - Reddit 社群研究</li>
+                        <li><a href="http://ffxiv.morpheusz.com/p/wondrous-tails-solver.html" target="_blank" rel="noopener noreferrer">Wondrous Tails Solver</a> - Morpheusz</li>
+                        <li><a href="https://xivapi.com/" target="_blank" rel="noopener noreferrer">XIVAPI</a> - 遊戲資料與圖示</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>FFXIV 繁中工具箱 | 天書奇談計算器</p>
+        <p class="credits">策略參考：<a href="http://ffxiv.morpheusz.com/p/wondrous-tails-solver.html" target="_blank">Morpheusz</a> · <a href="https://www.reddit.com/r/ffxiv/comments/550lo8/" target="_blank">Reddit 分析</a> · <a href="https://xivapi.com/" target="_blank">XIVAPI</a></p>
+        <p class="copyright">FINAL FANTASY XIV © SQUARE ENIX CO., LTD. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/probability.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
